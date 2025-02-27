@@ -1,0 +1,27 @@
+// Add simple particle animation
+const particles = document.querySelector('.particles');
+for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.style.cssText = `
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, ${Math.random()});
+        border-radius: 50%;
+        animation: float ${Math.random() * 10 + 5}s infinite;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+    `;
+    particles.appendChild(particle);
+}
+
+// Add keyframes dynamically
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-${Math.random() * 100 + 50}px); }
+        100% { transform: translateY(0); }
+    }
+`;
+document.head.appendChild(styleSheet);
