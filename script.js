@@ -25,3 +25,9 @@ styleSheet.textContent = `
     }
 `;
 document.head.appendChild(styleSheet);
+
+// Toggle light and dark mode
+const modeToggle = document.getElementById('mode-toggle');
+modeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('light-mode');
+});
