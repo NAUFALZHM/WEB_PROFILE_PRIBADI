@@ -1,12 +1,13 @@
-// Add simple particle animation
+// Particle animation
 const particles = document.querySelector('.particles');
 for (let i = 0; i < 50; i++) {
     const particle = document.createElement('div');
+    particle.className = 'particle';
     particle.style.cssText = `
         position: absolute;
         width: 5px;
         height: 5px;
-        background: rgba(255, 255, 255, ${Math.random()});
+        background: rgba(255, 255, 255, ${Math.random() * 0.5 + 0.2});
         border-radius: 50%;
         animation: float ${Math.random() * 10 + 5}s infinite;
         left: ${Math.random() * 100}%;
@@ -15,7 +16,6 @@ for (let i = 0; i < 50; i++) {
     particles.appendChild(particle);
 }
 
-// Add keyframes dynamically
 const styleSheet = document.createElement('style');
 styleSheet.textContent = `
     @keyframes float {
