@@ -93,7 +93,7 @@ body.light-mode nav a:hover {
 }
 
 .toggle-label::before {
-    content: '🌙';
+   
     position: absolute;
     left: 8px;
     top: 50%;
@@ -102,7 +102,7 @@ body.light-mode nav a:hover {
 }
 
 .toggle-label::after {
-    content: '☀️';
+ 
     position: absolute;
     right: 8px;
     top: 50%;
